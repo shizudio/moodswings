@@ -5,14 +5,14 @@ import { useState, useEffect } from 'react'
 const moods = ['Happy', 'Locked in', 'Like an uncle', 'Shiba mode', 'Handsome Otah', 'Fed', 'Sick', 'Found the one']
 
 const moodMedia = {
-  'Happy':          '/moods/happy.JPG',
-  'Locked in':      '/moods/locked-in.mp4',
-  'Like an uncle':  '/moods/uncle-mode.jpg',
-  'Shiba mode':     '/moods/shiba-mode.JPG',
-  'Handsome Otah':  '/moods/handsome-otah.JPG',
-  'Fed':            '/moods/fed.JPG',
-  'Sick':           '/moods/sick.JPG',
-  'Found the one':  '/moods/found-the-one.mp4',
+  'Happy':          '/moodswings/moods/happy.JPG',
+  'Locked in':      '/moodswings/moods/locked-in.mp4',
+  'Like an uncle':  '/moodswings/moods/uncle-mode.jpg',
+  'Shiba mode':     '/moodswings/moods/shiba-mode.JPG',
+  'Handsome Otah':  '/moodswings/moods/handsome-otah.JPG',
+  'Fed':            '/moodswings/moods/fed.JPG',
+  'Sick':           '/moodswings/moods/sick.JPG',
+  'Found the one':  '/moodswings/moods/found-the-one.mp4',
 }
 
 const pilePositions = {
