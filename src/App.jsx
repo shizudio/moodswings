@@ -153,6 +153,7 @@ function MoodDisplay({ mood }) {
       letterSpacing: '-0.02em',
       position: 'relative',
       zIndex: 2,
+      marginBottom: '32px',
     }}>
       {mood}
     </h1>
@@ -239,42 +240,48 @@ function App() {
   }
 
   return (
-    <div style={{
-      height: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '32px',
-      fontFamily: 'Georgia, serif',
-      background: '#FFFAF4',
-      position: 'relative',
-      overflow: 'hidden',
-    }}>
-      <PhotoPile activeMood={mood} />
-
-      <Label text="currently feeling" />
-      <MoodDisplay mood={mood} />
       <div style={{
+        minHeight: '100vh',
         display: 'flex',
-        flexWrap: 'wrap',
+        flexDirection: 'column',
+        alignItems: 'center',
         justifyContent: 'center',
-        gap: '10px',
-        maxWidth: '600px',
-        position: 'relative',
-        zIndex: 2,
+        gap: '24px',
+        fontFamily: 'Georgia, serif',
+        background: '#FFFAF4',
+        padding: '40px 20px',
+        boxSizing: 'border-box',
       }}>
-        {moods.map((m) => (
-          <MoodButton
-            key={m}
-            label={m}
-            isActive={m === mood}
-            onClick={() => handleMoodChange(m)}
-          />
-        ))}
+        {/* Top: Label + Mood name */}
+        <Label text="currently feeling" />
+        <MoodDisplay mood={mood} />
+  
+        {/* Middle: Photo pile */}
+        <PhotoPile activeMood={mood} />
+  
+        {/* Bottom: Buttons in 2 rows */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, auto)',
+          gap: '10px',
+          justifyContent: 'center',
+          position: 'relative',
+          zIndex: 2,
+          marginTop: '40px',
+        }}>
+          {moods.map((m) => (
+            <MoodButton
+              key={m}
+              label={m}
+              isActive={m === mood}
+              onClick={() => handleMoodChange(m)}
+            />
+          ))}
+        </div>
+  
+        <MoodHistory history={history} />
       </div>
-      <MoodHistory history={history} />
-    </div>
+    
   )
 }
 
