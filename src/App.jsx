@@ -263,14 +263,15 @@ function App() {
   
         {/* Bottom: Buttons in 2 rows */}
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(5, auto)',
-          gap: '10px',
-          justifyContent: 'center',
-          position: 'relative',
-          zIndex: 2,
-          marginTop: '40px',
-        }}>
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '10px',
+  justifyContent: 'center',
+  maxWidth: '500px',
+  margin: '40px auto 0',
+  position: 'relative',
+  zIndex: 2,
+}}>
           {moods.map((m) => (
             <MoodButton
               key={m}
