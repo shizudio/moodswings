@@ -192,11 +192,15 @@ function MoodHistory({ history }) {
   return (
     <div style={{
       display: 'flex',
-      gap: '6px',
+      flexWrap: 'wrap',
+      gap: '4px',
       alignItems: 'center',
+      justifyContent: 'center',
       marginTop: '8px',
+      maxWidth: '500px',
       position: 'relative',
       zIndex: 2,
+      padding: '0 20px',
     }}>
       <span style={{
         fontSize: '0.6rem',
@@ -215,9 +219,10 @@ function MoodHistory({ history }) {
             color: '#c4b8b0',
             fontFamily: 'courier new, monospace',
             fontStyle: 'italic',
+            whiteSpace: 'nowrap',
           }}
         >
-          {m}{i < history.length - 1 ? ' → ' : ''}
+          {m}{i < history.length - 1 ? ' →' : ''}
         </span>
       ))}
     </div>
