@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 // --- Data (all your moods, images, and pile positions) ---
 
-const moods = ['Happy', 'Locked in', 'Like an uncle', 'Shiba mode', 'Handsome Otah', 'Fed', 'Sick', 'Found the one']
+const moods = ['Happy', 'Locked in', 'Like an uncle', 'Shiba mode', 'Handsome Otah', 'Fed', 'Sick', 'Found the one','Sleepy']
 
 const moodMedia = {
   'Happy':          '/moodswings/moods/happy.JPG',
@@ -13,6 +13,7 @@ const moodMedia = {
   'Fed':            '/moodswings/moods/fed.JPG',
   'Sick':           '/moodswings/moods/sick.JPG',
   'Found the one':  '/moodswings/moods/found-the-one.mp4',
+  'Sleepy':  '/moodswings/moods/sleepy.JPG',
 }
 
 const pilePositions = {
@@ -24,6 +25,7 @@ const pilePositions = {
   'Fed':            { rotate: 3,   x: 12,  y: 14   },
   'Sick':           { rotate: -8,  x: -25, y: -3   },
   'Found the one':  { rotate: 5,   x: 22,  y: 8    },
+  'Sleepy':         { rotate: -7,  x: -16, y: 9    },
 }
 
 // --- Components ---
@@ -262,7 +264,7 @@ function App() {
         {/* Bottom: Buttons in 2 rows */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, auto)',
+          gridTemplateColumns: 'repeat(5, auto)',
           gap: '10px',
           justifyContent: 'center',
           position: 'relative',
